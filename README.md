@@ -27,7 +27,7 @@ Frontend (React + TypeScript) → Controller (REST/JSON) → Service → Reposit
 
 ## Integração com Twilio
 
-O backend utiliza o SDK oficial da Twilio para envio de SMS:
+O frontend possui um botão de notificação (`NotificationButton`) que aciona o endpoint `/sales/{id}/notification` no backend. Esse endpoint utiliza o SDK oficial da Twilio para enviar um SMS ao vendedor com os dados da venda (nome, valor e data), exibindo uma confirmação visual ("SMS enviado com sucesso") no frontend após o envio.
 
 ```xml
 <dependency>
